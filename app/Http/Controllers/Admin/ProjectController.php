@@ -80,7 +80,8 @@ class ProjectController extends Controller
     {
         // $project = Project::where('slug', $slug)->first();
         $types = Type::all();
-        return view('admin.projects.edit', compact('project', 'types'));
+        $technologies = Technology::all();
+        return view('admin.projects.edit', compact('project', 'types', 'technologies'));
     }
 
     /**
