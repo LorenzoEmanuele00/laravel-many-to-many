@@ -5,9 +5,9 @@
         <h2 class="my-3">{{$project->title}}</h2>
         <h5>Tipo: {{$project->type ? $project->type->name : 'Nessun Tipo'}}</h5>
         <div class="my-3">
-            Tag:
+            Technology tag:
             @foreach ($project->technologies as $technology)
-                <span class="badge bg-primary">{{ $technology->name ? $technology->name : 'Nessuna Tecnologia' }}</span>
+                <span class="badge bg-primary">{{ $technology->name }}</span>
             @endforeach
         </div>
         <p>{{$project->slug}}</p>

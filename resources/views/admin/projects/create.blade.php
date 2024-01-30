@@ -20,6 +20,12 @@
                     @endforeach
                 </select>
             </div>
+            @foreach ($technologies as $technology)
+                <div class="form-check w-25 mx-auto">
+                    <label class="form-check-label" for="technology_{{$technology->id}}">{{$technology->name}}</label>
+                    <input class="form-check-input" type="checkbox" value="{{$technology->id}}" id="technology_{{$technology->id}}">
+                </div>
+            @endforeach
             <div class="mb-3 w-50 mx-auto">
                 <label for="description" class="form-label">Descrizione</label>
                 <textarea class="form-control" id="description" rows="3" name="description">{{ old('description') }}</textarea>
